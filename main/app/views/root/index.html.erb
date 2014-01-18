@@ -1,0 +1,33 @@
+<h1>SOA_Auth demo</h1>
+
+<% if user_signed_in? -%>
+<div>
+  <ol>
+    <li>Go to the <%= link_to "protected resource", "//localhost:3001" %> on the other app to see you can get there now</li>
+    <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+    <li>Go back to the <%= link_to "protected resource", "//localhost:3001" %> on the other app to verify you cannot get there</li>
+  </ol>
+</div>
+  <div>
+    <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+  </div>
+<div>
+  <div><strong>Email:</strong> <%= current_user.email %></div>
+  <div><strong>sign_in_count:</strong> <%= current_user.sign_in_count %></div>
+  <div><strong>current_sign_in_at:</strong> <%= current_user.current_sign_in_at %></div>
+  <div><strong>last_sign_in_at:</strong> <%= current_user.last_sign_in_at %></div>
+  <div><strong>current_sign_in_ip:</strong> <%= current_user.current_sign_in_ip %></div>
+  <div><strong>last_sign_in_ip:</strong> <%= current_user.last_sign_in_ip %></div>
+  <div><strong>created_at:</strong> <%= current_user.created_at %></div>
+  <div><strong>updated_at:</strong> <%= current_user.updated_at %></div>
+  <div><strong>access_token:</strong> <%= session[:access_token] %></div>
+</div>
+<% else -%>
+<div>
+  <ol>
+    <li>Go to the <%= link_to "protected resource", "//localhost:3001" %> on the other app to verify you cannot get there</li>
+    <li><%= link_to "Login", new_user_session_path %> or <%= link_to "sign up", new_user_registration_path %></li>
+    <li>Go back to the <%= link_to "protected resource", "//localhost:3001" %> on the other app to see you can get there now</li>
+  </ol>
+</div>
+<% end -%>
