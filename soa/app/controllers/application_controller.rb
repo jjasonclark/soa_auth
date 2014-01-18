@@ -11,7 +11,7 @@ class ApplicationController < ActionController::Base
 
   def authorized_request?
     result = Faraday.post('http://localhost:3000/access_token/verify.json',
-      { :access_token => session[:access_token].to_s }.to_json,
+      { :access_token => cookies[:access_token].to_s }.to_json,
       { "content-type" => "application/json" })
     json = JSON.parse(result.body)
     json["valid"]

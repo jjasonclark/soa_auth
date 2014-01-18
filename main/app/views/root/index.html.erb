@@ -20,7 +20,7 @@
   <div><strong>last_sign_in_ip:</strong> <%= current_user.last_sign_in_ip %></div>
   <div><strong>created_at:</strong> <%= current_user.created_at %></div>
   <div><strong>updated_at:</strong> <%= current_user.updated_at %></div>
-  <div><strong>access_token:</strong> <%= session[:access_token] %></div>
+  <div><strong>access_token:</strong> <%= cookies[:access_token] %></div>
 </div>
 <% else -%>
 <div>

@@ -4,7 +4,14 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   def after_sign_in_path_for(user)
-    session[:access_token] = user.current_local_service_access_token.try(:token)
+    current_token = user.current_local_service_access_token
+    if current_token
+      cookies[:access_token] = {
+        value: current_token.token,
+        expires: current_token.created_at + current_token.expires_in.seconds,
+        domain: :all
+      }
+    end
     root_path
   end
 end
