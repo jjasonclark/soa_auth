@@ -14,4 +14,10 @@ class ApplicationController < ActionController::Base
     end
     root_path
   end
+
+  def after_sign_out_path_for(user)
+    cookies.delete :access_token, domain: :all
+    root_path
+  end
+
 end
