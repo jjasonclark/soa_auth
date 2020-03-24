@@ -1,0 +1,45 @@
+{
+  "name": "express-jwt",
+  "version": "0.0.1",
+  "description": "Server using Express and JWTs",
+  "license": "MIT",
+  "engines": {
+    "node": "12"
+  },
+  "author": "Jason Clark <jason@jjasonclark.com> (https://jjasonclark.com)",
+  "keywords": [
+    "authentication",
+    "jwt",
+    "express"
+  ],
+  "main": "src/index.js",
+  "scripts": {
+    "nodemon:dev": "nodemon --config nodemon.json | pino-pretty",
+    "dev": "node --inspect src/index.js | pino-pretty",
+    "preformat": "eslint --fix src/**/*.js",
+    "format": "prettier --write '{src/**/*.{js,json,graphql,md},*.md,package.json,*.js}'",
+    "lint": "eslint src/**/*.js",
+    "start": "node src/index.js"
+  },
+  "dependencies": {
+    "death": "^1.1.0",
+    "express": "^4.17.1",
+    "express-pino-logger": "^4.0.0",
+    "helmet": "^3.21.2",
+    "jose": "^1.25.0",
+    "pino": "^5.14.0",
+    "stoppable": "^1.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.9.0",
+    "eslint-plugin-filenames": "^1.3.2",
+    "eslint-plugin-import": "^2.19.1",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "nodemon": "^2.0.1",
+    "pino-debug": "^1.3.0",
+    "pino-pretty": "^3.4.0",
+    "prettier": "^1.19.1"
+  }
+}

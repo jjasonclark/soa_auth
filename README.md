@@ -8,6 +8,7 @@
 | -------------------------------------------- | ------------------------------------------ |
 | [rails-cookie](./rails-cookie/README.md)     | Ruby on Rails project using cookies        |
 | [express-cookie](./express-cookie/README.md) | Node.js with Express project using cookies |
+| [express-jwt](./express-jwt/README.md)       | Node.js with Express project using JWT     |
 
 ## License
 
