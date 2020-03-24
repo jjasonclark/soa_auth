@@ -4,9 +4,10 @@
 
 ## Projects
 
-| Path                                     | Description                         |
-| ---------------------------------------- | ----------------------------------- |
-| [rails-cookie](./rails-cookie/README.md) | Ruby on Rails project using cookies |
+| Path                                         | Description                                |
+| -------------------------------------------- | ------------------------------------------ |
+| [rails-cookie](./rails-cookie/README.md)     | Ruby on Rails project using cookies        |
+| [express-cookie](./express-cookie/README.md) | Node.js with Express project using cookies |
 
 ## License
 
