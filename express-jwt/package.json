@@ -26,7 +26,7 @@
     "express": "^4.17.1",
     "express-pino-logger": "^4.0.0",
     "helmet": "^3.21.2",
-    "jose": "^1.25.0",
+    "jose": "^1.28.2",
     "pino": "^5.14.0",
     "stoppable": "^1.1.0"
   },
